@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>🎬 CineBrasil Lite</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff0000, #990000);
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #ff4444;
+    }
+
+    .catalogo {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .filme {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 10px;
+      width: 180px;
+      transition: 0.3s;
+    }
+
+    .filme:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px red;
+    }
+
+    .filme img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .filme button {
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      background: red;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .player {
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 90%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 10px;
+      background: #111;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>🎬 CineBrasil Lite</header>
+
+<h2>🎌 Animação</h2>
+
+<div class="catalogo">
+
+  <!-- Dragon Ball -->
+  <div class="filme">
+    <img src="Dragon Ball.jpg">
+    <p>Dragon Ball</p>
+    <button onclick="playVideo('https://myvidplay.com/e/qyg7ydgnehyj')">
+      ▶ Assistir
+    </button>
+  </div>
+
+</div>
+
+<h2>👻 Terror</h2>
+
+<div class="catalogo">
+
+  <!-- Silent Hill -->
+  <div class="filme">
+    <img src="Silent Hill Revelacao.jpg">
+    <p>Silent Hill: Revelação</p>
+    <button onclick="playVideo('https://myvidplay.com/e/qyg7ydgnehyj')">
+      ▶ Assistir
+    </button>
+  </div>
+
+</div>
+
+<!-- PLAYER -->
+<div class="player">
+  <iframe id="videoPlayer" src=""></iframe>
+</div>
+
+<footer>
+  CineBrasil Lite © 2026
+</footer>
+
+<script>
+  function playVideo(link) {
+    document.getElementById("videoPlayer").src = link;
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>
